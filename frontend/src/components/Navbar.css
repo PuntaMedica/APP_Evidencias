@@ -1,0 +1,135 @@
+/* frontend/src/components/Navbar.css */
+
+/* Estilos Generales del Navbar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo .logo-image {
+  height: 50px;
+}
+
+/* Enlaces de Navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
+/* Botón de Logout */
+.logout-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.logout-button:hover {
+  color: #ddd;
+}
+
+/* Menú Hamburguesa */
+.dropdown {
+  display: none;
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  color: #ddd;
+}
+
+/* Menú Desplegable */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #444;
+  border: 1px solid #555;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+}
+
+.dropdown-item a,
+.dropdown-item button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-item a:hover,
+.dropdown-item button:hover {
+  background-color: #555;
+}
+
+/* Animación para el Menú Desplegable */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+}

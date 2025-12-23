@@ -1,0 +1,191 @@
+/* frontend/src/components/Galeria.css */
+
+.galeria {
+  padding: 20px;
+}
+
+.galeria-title {
+  font-size: 28px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Sección de Filtro */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.floor-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.date-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.clear-filter-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-filter-button:hover {
+  background-color: #c82333;
+}
+
+.galeria-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.galeria-images {
+  flex: 2;
+  overflow-y: auto;
+  max-height: 80vh; /* Ajusta según sea necesario */
+}
+
+.floor-section {
+  margin-bottom: 40px;
+}
+
+.floor-title {
+  font-size: 24px;
+  color: #333;
+  text-align: left; /* Alineación a la izquierda */
+  margin-bottom: 15px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.thumbnail:hover {
+  border-color: #777;
+}
+
+.view-more-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3;
+}
+
+.preview-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.image-info {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .galeria-container {
+    flex-direction: column;
+  }
+
+  .preview-section {
+    margin-top: 20px;
+  }
+
+  .thumbnails {
+    justify-content: center;
+  }
+
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+
+  .preview-image {
+    max-width: 200px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clear-filter-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+
+  .preview-image {
+    max-width: 150px;
+  }
+
+  .floor-title {
+    font-size: 20px;
+  }
+
+  .galeria-title {
+    font-size: 24px;
+  }
+
+  .floor-select,
+  .date-select {
+    font-size: 14px;
+  }
+
+  .clear-filter-button,
+  .view-more-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

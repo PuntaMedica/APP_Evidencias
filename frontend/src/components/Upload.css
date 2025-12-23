@@ -1,0 +1,194 @@
+/* frontend/src/components/Upload.css */
+.upload-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .upload-title {
+    font-size: 28px;
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .upload-container {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Estilo para la Selección de Piso */
+  .floor-label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .floor-select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Botón Personalizado "Agregar más imágenes" */
+  .add-images-button {
+    padding: 10px 20px;
+    background-color: #3b82f6; /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    align-self: flex-start;
+  }
+  
+  .add-images-button:hover {
+    background-color: #2563eb; /* Azul más oscuro al hacer hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Botones de Subida y Cancelar */
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    align-self: flex-start;
+  }
+  
+  .upload-button {
+    padding: 10px 20px;
+    background-color: #10b981; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .upload-button:hover {
+    background-color: #059669; /* Verde oscuro al hacer hover */
+    transform: translateY(-2px);
+  }
+  
+  .cancel-button {
+    padding: 10px 20px;
+    background-color: #ef4444; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #dc2626; /* Rojo oscuro al hacer hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Estado de Subida */
+  .upload-status {
+    font-size: 16px;
+    color: #16a34a; /* Verde oscuro */
+    text-align: center;
+  }
+  
+  /* Sección de Miniaturas */
+  .thumbnails-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.05);
+    border-color: #1e3a8a;
+  }
+  
+  /* Sección de Imagen Agrandada */
+  .enlarged-image-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .enlarged-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #1e3a8a;
+    border-radius: 8px;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .upload-page {
+      padding: 10px;
+    }
+  
+    .upload-title {
+      font-size: 24px;
+    }
+  
+    .add-images-button,
+    .upload-button,
+    .cancel-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .enlarged-image {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .upload-title {
+      font-size: 20px;
+    }
+  
+    .floor-select {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  
+    .add-images-button,
+    .upload-button,
+    .cancel-button {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .enlarged-image {
+      max-width: 100%;
+    }
+  }
+  
